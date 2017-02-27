@@ -50,6 +50,15 @@ function gestionarXml(dadesXml){
  ponerDatosSelectHtml(tituloSelect,opcionesSelect);
  respuestaSelect=parseInt(xmlDoc.getElementsByTagName("answer")[0].innerHTML); 
  
+ var tituloPregunta2.getElementsByTagName("title")[1].innerHTML;
+ var opcionesSelect = [];
+ var nopt = xmlDoc.getElementById("q_002").getElementsByTagName('option').length;
+  for (i = 0; i < nopt; i++) { 
+    opcionesSelect[i] = xmlDoc.getElementById("q_002").getElementsByTagName('option')[i].innerHTML;
+ }
+ 
+ ponerDatosSelectHtml(tituloPregunta2,opcionesSelect);
+ respuestaSelect=parseInt(xmlDoc.getElementsByTagName("answer")[1].innerHTML); 
  
  //NUMBER
  //Recuperamos el título y la respuesta correcta de Input, guardamos el número secreto
